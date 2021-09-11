@@ -185,6 +185,16 @@ img{
   align-items: center;
 }
 
+.nav__logo{
+  font-size: var(--h2-font-size);
+  font-weight: 600;
+}
+
+.nav__logo span{
+  color: var(--first-color);
+  transition: all 0.3s ease;
+}
+
 .nav__logo,
 .nav__toggle{
   color: var(--title-color);
@@ -964,6 +974,10 @@ img{
 /*==================== MEDIA QUERIES ====================*/
 /* For small devices */
 @media screen and (max-width: 350px){
+  .nav{
+    max-width: 350px;
+  }
+
   .container{
     margin-left: var(--mb-1);
     margin-right: var(--mb-1);
@@ -1004,6 +1018,11 @@ img{
 
 /* For medium devices */
 @media screen and (max-width: 568){
+
+  .nav{
+    max-width: 568
+  }
+
   .home__content{
     grid-template-columns: max-content 1fr 1fr;
   }
@@ -1061,9 +1080,11 @@ img{
   }
 
   .nav{
+    min-width: 768px;
     height: calc(var(--header-height) + 1.5rem);
     column-gap: 1rem;
   }
+
 
   .nav__icon,
   .nav__close,
@@ -1174,6 +1195,12 @@ img{
 
 /* For large devices */
 @media screen and (min-width: 1024px) {
+
+  .nav{
+    padding-left: 20px;
+    min-width: 1024px;
+  }
+
   .header,
   .main,
   .footer__container{
@@ -1215,7 +1242,4 @@ img{
   .contact__inputs{
     grid-template-columns: repeat(2, 1fr);
   }
-
-
-
 }
